@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pheno Brand | Digital Branding & Marketing</title>
+
+  <meta name="description" content="Pheno Brand helps businesses build stronger digital brands through strategic branding, social media, content creation and digital marketing.">
+
+  <meta name="keywords" content="digital marketing, digital branding, social media marketing, brand strategy, content creation, social media management, business growth">
+
+  <meta name="author" content="Pheno Brand">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #08080d;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      background: rgba(8, 8, 13, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #b96cff;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: #d7d7df;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #c777ff;
+    }
+
+    .nav-button {
+      padding: 11px 20px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #8e42ff, #d05cff);
+      color: white !important;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: #822cff;
+      filter: blur(180px);
+      opacity: 0.18;
+      top: 5%;
+      right: -10%;
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      background: #ff48bd;
+      filter: blur(170px);
+      opacity: 0.12;
+      bottom: -10%;
+      left: -5%;
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid rgba(203,117,255,0.4);
+      border-radius: 30px;
+      color: #d98cff;
+      font-size: 13px;
+      margin-bottom: 20px;
+      background: rgba(157,65,255,0.08);
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: 1.02;
+      margin-bottom: 25px;
+      letter-spacing: -3px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #b65cff, #f47bff, #8f6bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: #bcbcc7;
+      font-size: 18px;
+      max-width: 620px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #8e42ff, #d05cff);
+    }
+
+    .btn-secondary {
+      border: 1px solid #555560;
+      color: #eee;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(173,77,255,0.25);
+    }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      position: relative;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .orb {
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 30%, #f3a1ff, transparent 20%),
+        radial-gradient(circle at 70% 70%, #6828ff, transparent 35%),
+        linear-gradient(135deg, #7c24ff, #e451d5);
+      box-shadow:
+        0 0 70px rgba(165,67,255,0.45),
+        inset -30px -30px 70px rgba(0,0,0,0.3);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: rgba(20,20,29,0.9);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 17px 20px;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .card-one {
+      top: 70px;
+      left: 5px;
+    }
+
+    .card-two {
+      right: 0;
+      bottom: 90px;
+      animation-delay: 1s;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 20px;
+    }
+
+    .floating-card small {
+      color: #aaa;
+    }
+
+    @keyframes float {
+      0%,100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading span {
+      color: #c86aff;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1;
+      margin: 12px 0 18px;
+    }
+
+    .section-heading p {
+      color: #aaaab5;
+      font-size: 17px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-box {
+      min-height: 400px;
+      border-radius: 30px;
+      background:
+        linear-gradient(145deg, rgba(143,55,255,0.2), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-box::before {
+      content: "PHENO";
+      font-size: 85px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.035);
+      transform: rotate(-20deg);
+    }
+
+    .about-text p {
+      color: #b9b9c4;
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+
+    /* MISSION */
+
+    .mission {
+      background: #0d0d14;
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .mission-card {
+      padding: 45px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 25px;
+      background: rgba(255,255,255,0.025);
+      transition: 0.3s;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(196,92,255,0.5);
+    }
+
+    .mission-card h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .mission-card p {
+      color: #aaaab5;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 30px 25px;
+      min-height: 270px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      transition: 0.35s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(201,99,255,0.5);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(184,87,255,0.13);
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: #9f9faa;
+      font-size: 14px;
+    }
+
+    /* WHY */
+
+    .why {
+      background: #0d0d14;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .why-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      color: #a3a3ae;
+      font-size: 15px;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 30px;
+      border-top: 2px solid #a84dff;
+    }
+
+    .number {
+      font-size: 45px;
+      font-weight: 900;
+      color: rgba(199,93,255,0.25);
+      margin-bottom: 15px;
+    }
+
+    .process-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: #a1a1ac;
+      font-size: 14px;
+    }
+
+    /* AUDIENCE */
+
+    .audience {
+      background: linear-gradient(135deg, #110d1b, #0c0c12);
+    }
+
+    .audience-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .audience-list span {
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      color: #d2d2dc;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 110px 20px;
+      background:
+        radial-gradient(circle at center, rgba(141,45,255,0.18), transparent 50%),
+        #08080d;
+    }
+
+    .cta h2 {
+      font-size: clamp(38px, 6vw, 62px);
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.08;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #aaaab5;
+      font-size: 17px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+    }
+
+    .contact-info p {
+      color: #aaaab5;
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      margin-bottom: 17px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+
+    .contact-item a {
+      color: #bf72ff;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #111119;
+      color: white;
+      outline: none;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #b858ff;
+    }
+
+    form button {
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-family: inherit;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 60px 0 25px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: #060609;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 45px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #898995;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 20px;
+      color: #70707b;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        width: 90%;
+        padding: 25px;
+        background: #111119;
+        border-radius: 18px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-visual {
+        height: 400px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-visual {
+        height: 330px;
+      }
+
+      .orb {
+        width: 230px;
+        height: 230px;
+      }
+
+      .floating-card {
+        padding: 12px 15px;
+      }
+
+      .card-one {
+        left: 0;
+      }
+
+      .card-two {
+        right: 0;
+      }
+
+      .services-grid,
+      .why-grid,
+      .process-grid,
+      .mission-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-card {
+        padding: 30px;
+      }
+
+      .about-box {
+        min-height: 280px;
+      }
+
+      .about-box::before {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        PHENO<span>BRAND</span>
+      </a>
+
+      <div class="menu" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-button">Get Started</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div>
+        <span class="eyebrow">DIGITAL BRANDING • DIGITAL MARKETING</span>
+
+        <h1>
+          Build a Brand
+          <span class="gradient-text">People Remember.</span>
+        </h1>
+
+        <p>
+          Pheno Brand helps businesses build stronger digital identities,
+          reach the right audience, communicate their value clearly,
+          and turn online attention into meaningful growth.
+        </p>
+
+        <div class="buttons">
+          <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="orb"></div>
+
+        <div class="floating-card card-one">
+          <strong>+ Visibility</strong>
+          <small>Get noticed online</small>
+        </div>
+
+        <div class="floating-card card-two">
+          <strong>+ Connection</strong>
+          <small>Reach your audience</small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="container about-grid">
+
+      <div class="about-box"></div>
+
+      <div class="about-text">
+
+        <div class="section-heading">
+          <span>ABOUT PHENO BRAND</span>
+
+          <h2>
+            We Don't Just Build Brands.
+            <span class="gradient-text">We Build Connections.</span>
+          </h2>
+        </div>
+
+        <p>
+          Pheno Brand is a digital branding and marketing agency created
+          to help businesses communicate better, reach the right people,
+          and grow confidently in the digital space.
+        </p>
+
+        <p>
+          We believe a strong brand is more than a logo or a beautiful
+          social media page. It is the way a business communicates,
+          the experience it creates, and the reason customers remember it.
+        </p>
+
+        <p>
+          Our approach combines creativity, strategy, audience understanding,
+          and consistent digital communication to help brands become more
+          visible, recognizable, and relevant.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MISSION & VISION -->
+  <section class="mission">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>OUR DIRECTION</span>
+        <h2>Purpose With Strategy.</h2>
+        <p>
+          Everything we do is built around helping brands communicate
+          with purpose and grow with confidence.
+        </p>
+      </div>
+
+      <div class="mission-grid">
+
+        <div class="mission-card">
+          <h3>Our Mission</h3>
+          <p>
+            To help businesses build meaningful digital brands by connecting
+            the right message with the right audience through creative,
+            strategic, and effective digital marketing.
+          </p>
+        </div>
+
+        <div class="mission-card">
+          <h3>Our Vision</h3>
+          <p>
+            To become a trusted digital branding partner for businesses
+            that want to stand out, connect with their audience,
+            and grow in an increasingly digital world.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>WHAT WE DO</span>
+
+        <h2>
+          Digital Strategy.
+          <span class="gradient-text">Creative Execution.</span>
+        </h2>
+
+        <p>
+          From brand identity to digital visibility, we help businesses
+          create a stronger presence and communicate with confidence.
+        </p>
+      </div>
+
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>Brand Strategy</h3>
+          <p>
+            Develop your positioning, messaging, audience direction,
+            and overall brand strategy.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">◎</div>
+          <h3>Social Media Management</h3>
+          <p>
+            Build a consistent social presence with purposeful,
+            audience-focused content.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✎</div>
+          <h3>Content Creation</h3>
+          <p>
+            Create engaging content designed to educate,
+            attract, entertain, and convert.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">↗</div>
+          <h3>Digital Marketing</h3>
+          <p>
+            Build practical digital strategies around your business goals
+            and target audience.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">◇</div>
+          <h3>Brand Identity</h3>
+          <p>
+            Develop a recognizable visual direction, messaging style,
+            and brand personality.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">◉</div>
+          <h3>Social Media Branding</h3>
+          <p>
+            Improve your social profiles, visual consistency,
+            messaging, and online presentation.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⌁</div>
+          <h3>Audience & Content Strategy</h3>
+          <p>
+            Identify the people your brand should reach and create
+            content that speaks directly to them.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">▣</div>
+          <h3>Online Presence</h3>
+          <p>
+            Create a professional digital presence that clearly
+            communicates what your business offers.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY PHENO -->
+  <section class="why">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>WHY PHENO</span>
+
+        <h2>
+          Marketing With
+          <span class="gradient-text">Meaning.</span>
+        </h2>
+
+        <p>
+          We focus on purposeful digital marketing rather than creating
+          noise for the sake of being visible.
+        </p>
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <h3>Audience-Focused</h3>
+          <p>
+            We focus on reaching people who are most likely to care
+            about what your brand offers.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Strategy Before Noise</h3>
+          <p>
+            Every strong digital presence needs direction.
+            We focus on purposeful marketing.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Creative Thinking</h3>
+          <p>
+            We look for fresh and engaging ways for brands
+            to communicate and stand out.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Clear Communication</h3>
+          <p>
+            We help businesses explain what they offer
+            in a way their audience can quickly understand.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Consistent Branding</h3>
+          <p>
+            We create consistency across visuals, messaging,
+            platforms, and customer interactions.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <h3>Growth Mindset</h3>
+          <p>
+            We learn, test, adapt, and improve strategies
+            based on what works.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+  <section id="process">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>OUR PROCESS</span>
+
+        <h2>
+          From Idea
+          <span class="gradient-text">To Growth.</span>
+        </h2>
+
+        <p>
+          A simple strategic process designed to turn your ideas
+          into a stronger digital presence.
+        </p>
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-card">
+          <div class="number">01</div>
+          <h3>Discover</h3>
+          <p>
+            We learn about your business, goals, audience,
+            competitors, and current digital presence.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="number">02</div>
+          <h3>Strategize</h3>
+          <p>
+            We create a clear direction based on your objectives
+            and target audience.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="number">03</div>
+          <h3>Create</h3>
+          <p>
+            We develop the branding, content, campaigns,
+            and digital materials required.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="number">04</div>
+          <h3>Grow</h3>
+          <p>
+            We monitor performance, learn from results,
+            and improve the strategy over time.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHO WE HELP -->
+  <section class="audience">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>WHO WE HELP</span>
+
+        <h2>
+          Built For Brands
+          <span class="gradient-text">Ready To Grow.</span>
+        </h2>
+
+        <p>
+          Whether you're starting from scratch or taking an existing
+          brand to the next level, Pheno Brand helps you create
+          a digital presence with purpose.
+        </p>
+      </div>
+
+      <div class="audience-list">
+        <span>Small Businesses</span>
+        <span>Startups</span>
+        <span>Entrepreneurs</span>
+        <span>Personal Brands</span>
+        <span>Online Businesses</span>
+        <span>Service Providers</span>
+        <span>E-Commerce Brands</span>
+        <span>Local Businesses</span>
+        <span>Creators</span>
+        <span>Growing Companies</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>
+      Ready to Give Your Brand a
+      <span class="gradient-text">Stronger Digital Presence?</span>
+    </h2>
+
+    <p>
+      Let's turn your ideas into a brand that attracts attention,
+      communicates clearly, and connects with the right audience.
+    </p>
+
+    <a href="#contact" class="btn btn-primary">
+      Let's Work Together
+    </a>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="container contact-grid">
+
+      <div class="contact-info">
+
+        <div class="section-heading">
+          <span>GET IN TOUCH</span>
+
+          <h2>
+            Let's
+            <span class="gradient-text">Connect.</span>
+          </h2>
+        </div>
+
+        <p>
+          Have a project, idea, or business you'd like to grow online?
+          We'd love to hear from you.
+        </p>
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:officialmindfulsoul@gmail.com">
+            officialmindfulsoul@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Instagram</strong>
+          <a href="https://instagram.com/pheno_brandng" target="_blank">
+            @pheno_brandng
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Facebook</strong>
+          <a href="https://facebook.com/phenobrandng" target="_blank">
+            phenobrandng
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>YouTube</strong>
+          <a href="https://youtube.com/@phenobrandng" target="_blank">
+            @phenobrandng
+          </a>
+        </div>
+
+      </div>
+
+
+      <form onsubmit="sendMessage(event)">
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          required
+        >
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Your Email"
+          required
+        >
+
+        <input
+          type="text"
+          id="business"
+          placeholder="Business / Brand Name"
+        >
+
+        <select id="service">
+          <option value="">What do you need help with?</option>
+          <option>Brand Strategy</option>
+          <option>Social Media Management</option>
+          <option>Content Creation</option>
+          <option>Digital Marketing</option>
+          <option>Brand Identity</option>
+          <option>Social Media Branding</option>
+          <option>Website / Online Presence</option>
+          <option>Other</option>
+        </select>
+
+        <textarea
+          id="message"
+          placeholder="Tell us about your project..."
+          required
+        ></textarea>
+
+        <button class="btn btn-primary" type="submit">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+        <h3>PHENO<span style="color:#b96cff;">BRAND</span></h3>
+
+        <p>
+          Strategic digital branding and marketing designed
+          to help businesses connect with the right audience
+          and grow online.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Connect</h3>
+
+        <div class="footer-links">
+          <a href="https://instagram.com/pheno_brandng" target="_blank">Instagram</a>
+          <a href="https://facebook.com/phenobrandng" target="_blank">Facebook</a>
+          <a href="https://youtube.com/@phenobrandng" target="_blank">YouTube</a>
+          <a href="mailto:officialmindfulsoul@gmail.com">Email</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container copyright">
+      © 2026 Pheno Brand. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+
+    function sendMessage(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const business = document.getElementById("business").value;
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value;
+
+      const subject = encodeURIComponent(
+        "New Pheno Brand Inquiry - " + name
+      );
+
+      const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\nBusiness: " + business +
+        "\nService: " + service +
+        "\n\nMessage:\n" + message
+      );
+
+      window.location.href =
+        "mailto:officialmindfulsoul@gmail.com?subject=" +
+        subject +
+        "&body=" +
+        body;
+    }
+
+  </script>
+
+</body>
+</html>
